@@ -9,8 +9,13 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const DatePickerPage = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
+interface DatePickerPageProps {
+  newDate: Date | null;
+  setNewDate: (date: Date | null) => void;
+  placeholder: string;
+}
+
+const DatePickerPage = ({ newDate, setNewDate, placeholder}: DatePickerPageProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCalendar = () => {
@@ -21,11 +26,11 @@ const DatePickerPage = () => {
     <div className="relative">
       <div className="">
         <DatePicker
-          selected={startDate}
-          onChange={(date: Date | null) => date && setStartDate(date)}
+          selected={newDate}
+          onChange={(date: Date | null) => date && setNewDate(date)}
           dateFormat="dd_MM_yyyy"
-          placeholderText="From"
-          className="border border-gray-300 rounded px-4 py-2 relative w-40.5 h-7"
+          placeholderText={placeholder}
+          className="border border-[#DEDEDE] text-[#636264] font-serif font-normal text-[13px] rounded px-2 py-2 relative w-40.5 h-7"
           calendarClassName="custom-calendar"
           open={isOpen}
           onClickOutside={() => {
@@ -37,7 +42,7 @@ const DatePickerPage = () => {
       </div>
       <div className=" flex items-center justify-center  absolute top-0 right-0 z-20">
         <div
-          onClick={() => setStartDate(null)}
+          onClick={() => setNewDate(null)}
           className=" flex items-center justify-center bg-[#ebebeb] w-6 h-7 border-[#dedede] border-l border-y"
         >
           <Image
