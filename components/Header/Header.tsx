@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Grid } from "../Grid/Grid";
 
 import Logo from "@/assets/image/Logo.svg";
+import DatePickerPage from "../DatePicker/DatePicker";
 
 const Header = () => {
   return (
@@ -17,8 +18,8 @@ const Header = () => {
         <div className="col-span-6 col-start-5 ">
           <div className="flex items-center ">
             <h3 className="font-sans font-medium text-2xl">monblanproject</h3>
-            <div className="flex items-center justify-center border-[#3d8eda] h-7 px-3 border rounded-xs ml-4 ">
-              <p className="font-serif font-normal text-[13px] text-[#3d8eda]">
+            <div className="flex items-center justify-center border-primary h-7 px-3 border rounded-xs ml-4 ">
+              <p className="font-serif font-normal text-[13px] text-primary">
                 {" "}
                 Start on 17-02-2016
               </p>
@@ -39,6 +40,7 @@ const Header = () => {
 
           <div className="flex items-center gap-5 mt-5">
             <p className="font-serif text-[16px] font-normal">Date</p>
+            <DatePickerPage />
           </div>
         </div>
       </Grid>
