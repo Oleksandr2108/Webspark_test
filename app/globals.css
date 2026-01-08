@@ -9,7 +9,10 @@
   --color-Maingrey: #ebebeb;
 }
 
-
+body {
+  background-color: #fafafa;
+  padding-bottom: 200px;
+}
 
 button {
   background: none;
@@ -33,15 +36,6 @@ a {
   cursor: pointer;
 }
 
-input {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  color: inherit;
-  outline: none;
-}
-
 input:focus {
   outline: none;
 }
@@ -49,14 +43,6 @@ input:focus {
 .custom-calendar .react-datepicker__current-month {
   font-family: var(--font-serif);
 }
-/* 
-.custom-calendar .react-datepicker__day {
-  color: var(--color-foreground);
-} */
-
-/* .custom-calendar .react-datepicker__day:hover {
-  background-color: var(--color-accent);
-} */
 
 .custom-calendar .react-datepicker__header {
   background-color: transparent;
@@ -149,7 +135,6 @@ input:focus {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
 }
 
-/* Якщо вибраний день у 1-й колонці */
 .react-datepicker__month:has(.react-datepicker__day--selected:nth-child(1))
   .react-datepicker__day:nth-child(1):not(
     .react-datepicker__day--outside-month
@@ -158,7 +143,6 @@ input:focus {
   border-radius: 2px;
 }
 
-/* 2 колонка */
 .react-datepicker__month:has(.react-datepicker__day--selected:nth-child(2))
   .react-datepicker__day:nth-child(2):not(
     .react-datepicker__day--outside-month
@@ -167,7 +151,6 @@ input:focus {
   border-radius: 2px;
 }
 
-/* 3 колонка */
 .react-datepicker__month:has(.react-datepicker__day--selected:nth-child(3))
   .react-datepicker__day:nth-child(3):not(
     .react-datepicker__day--outside-month
