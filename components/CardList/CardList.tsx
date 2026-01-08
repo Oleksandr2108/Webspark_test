@@ -9,14 +9,23 @@ import { useState } from "react";
 
 interface CardListProps {
   posts: Post[];
+  startDate: Date | null;
+  endDate: Date | null;
 }
 
-const CardList = ({ posts }: CardListProps) => {
+const CardList = ({ posts, startDate, endDate }: CardListProps) => {
   const [viewMode, setViewMode] = useState<"list" | "grid">("list");
   const [loadMore, setLoadMore] = useState<number>(8);
+
+  const filteredPosts = posts.filter((post) => {
+    const postDate = new Date(post.imageUpload);
+    if (startDate && postDate < startDate) return false;
+    if (endDate && postDate > endDate) return false;
+    return true;
+  });
   return (
     <>
-      <Grid className="gup-y-4">
+      <Grid className="gap-y-4">
         <div className="col-span-full flex gap-5 ml-auto py-5 ">
           <GridIcon
             active={viewMode === "grid"}
@@ -27,7 +36,7 @@ const CardList = ({ posts }: CardListProps) => {
             onClick={() => setViewMode("list")}
           />
         </div>
-        {posts
+        {filteredPosts
           .map((item) => (
             <CardItem
               key={item.id}
@@ -37,8 +46,8 @@ const CardList = ({ posts }: CardListProps) => {
           ))
           .slice(0, loadMore)}
 
-        <div className="col-span-full pb-50">
-          {loadMore >= posts.length ? (
+        <div className="col-span-full pb-25">
+          {loadMore >= filteredPosts.length ? (
             <></>
           ) : (
             <div

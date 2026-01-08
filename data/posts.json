@@ -30,7 +30,7 @@
   {
     "id": 5,
     "imageUpload": "2025-01-10",
-    "imageUrl": "https://picsum.photos/id/105/400/300",
+    "imageUrl": "https://picsum.photos/id/142/400/300",
     "stats": { "date": "2025-01-24", "likes": 48, "comments": 12 },
     "today": { "likes": 89, "comments": 20 }
   },
@@ -44,14 +44,14 @@
   {
     "id": 7,
     "imageUpload": "2025-01-14",
-    "imageUrl": "https://picsum.photos/id/107/400/300",
+    "imageUrl": "https://picsum.photos/id/124/400/300",
     "stats": { "date": "2025-01-28", "likes": 39, "comments": 9 },
     "today": { "likes": 71, "comments": 15 }
   },
   {
     "id": 8,
     "imageUpload": "2025-01-16",
-    "imageUrl": "https://picsum.photos/id/108/400/300",
+    "imageUrl": "https://picsum.photos/id/167/400/300",
     "stats": { "date": "2025-01-30", "likes": 82, "comments": 24 },
     "today": { "likes": 149, "comments": 38 }
   },
@@ -264,7 +264,7 @@
   {
     "id": 38,
     "imageUpload": "2025-04-15",
-    "imageUrl": "https://picsum.photos/id/138/400/300",
+    "imageUrl": "https://picsum.photos/id/178/400/300",
     "stats": { "date": "2025-04-24", "likes": 94, "comments": 28 },
     "today": { "likes": 170, "comments": 46 }
   },
@@ -335,7 +335,7 @@
   {
     "id": 48,
     "imageUpload": "2025-05-15",
-    "imageUrl": "https://picsum.photos/id/148/400/300",
+    "imageUrl": "https://picsum.photos/id/198/400/300",
     "stats": { "date": "2025-05-24", "likes": 97, "comments": 29 },
     "today": { "likes": 174, "comments": 48 }
   },
@@ -349,7 +349,7 @@
   {
     "id": 50,
     "imageUpload": "2025-05-19",
-    "imageUrl": "https://picsum.photos/id/150/400/300",
+    "imageUrl": "https://picsum.photos/id/157/400/300",
     "stats": { "date": "2025-05-28", "likes": 89, "comments": 26 },
     "today": { "likes": 160, "comments": 42 }
   }

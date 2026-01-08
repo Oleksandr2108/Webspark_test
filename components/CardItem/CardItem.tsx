@@ -33,7 +33,7 @@ const CardItem = ({ viewMode, post }: CardItemProps) => {
           className={
             viewMode === "list"
               ? "flex w-full items-center justify-between  ml-7.5"
-              : "flex-col px-3"
+              : "flex-col px-3 pt-2 pb-4"
           }
         >
           <div className={viewMode === "list" ?"flex " : "flex justify-between "}>
@@ -96,7 +96,7 @@ const CardItem = ({ viewMode, post }: CardItemProps) => {
             </div>
           </div>
 
-          <div>
+          <div className={viewMode === "list" ? "flex flex-col" : "flex items-center justify-between mt-6"}>
             <h3 className="font-serif font-medium text-[16px]">Image upload</h3>
             <p className="font-serif font-medium text-[14px]">
               {post.imageUpload}

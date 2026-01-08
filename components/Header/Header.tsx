@@ -5,12 +5,19 @@ import { Grid } from "../Grid/Grid";
 
 import Logo from "@/assets/image/Logo.svg";
 import DatePickerPage from "../DatePicker/DatePicker";
-import { useState } from "react";
 
-const Header = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
-
+interface HeaderProps {
+  startDate: Date | null;
+  endDate: Date | null;
+  setStartDate: (date: Date | null) => void;
+  setEndDate: (date: Date | null) => void;
+}
+const Header = ({
+  startDate,
+  setStartDate,
+  endDate,
+  setEndDate,
+}: HeaderProps) => {
   return (
     <div className="w-full h-43 py-1.5 shadow-[0_4px_24px_0_rgba(0,0,0,0.12),inset_0_12px_24px_0_rgba(0,0,0,0.12)] bg-[rgba(255,255,255,0.67)]">
       <Grid className="items-center">

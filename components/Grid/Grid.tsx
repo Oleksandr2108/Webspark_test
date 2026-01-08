@@ -3,7 +3,8 @@ import { ReactNode } from "react";
 type GridProps = {
   children: ReactNode;
   columns?: number;
-  gutter?: number;
+  colGap?: number;
+  rowGap?: number;
   margin?: number;
   className?: string;
 };
@@ -11,7 +12,8 @@ type GridProps = {
 export const Grid = ({
   children,
   columns = 12,
-  gutter = 8,
+  colGap = 8,
+  rowGap = 16,
   margin = 300,
   className = "",
 }: GridProps) => {
@@ -26,9 +28,10 @@ export const Grid = ({
     }[columns] || "grid-cols-12";
 
   const style = {
-    gap: `${gutter}px`,
     marginLeft: `${margin}px`,
     marginRight: `${margin}px`,
+    columnGap: `${colGap}px`,
+    rowGap: `${rowGap}px`,
   };
 
   return (
