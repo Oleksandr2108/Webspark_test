@@ -9,6 +9,8 @@ interface HeaderProps {
   endDate: Date | null;
   setStartDate: (date: Date | null) => void;
   setEndDate: (date: Date | null) => void;
+  minDate: Date | undefined;
+  maxDate: Date | undefined;
 }
 
 const Header = ({
@@ -16,6 +18,8 @@ const Header = ({
   setStartDate,
   endDate,
   setEndDate,
+  minDate,
+  maxDate,
 }: HeaderProps) => {
   return (
     <div className="w-full py-4 md:py-1.5 shadow-[0_4px_24px_0_rgba(0,0,0,0.12),inset_0_12px_24px_0_rgba(0,0,0,0.12)] bg-[rgba(255,255,255,0.67)]">
@@ -62,11 +66,15 @@ const Header = ({
                   newDate={startDate}
                   setNewDate={setStartDate}
                   placeholder="from"
+                  minDate={minDate}
+                  maxDate={maxDate}
                 />
                 <DatePickerPage
                   newDate={endDate}
                   setNewDate={setEndDate}
                   placeholder="to"
+                  minDate={minDate}
+                  maxDate={maxDate}
                 />
               </div>
             </div>

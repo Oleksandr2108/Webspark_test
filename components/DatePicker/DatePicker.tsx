@@ -10,12 +10,16 @@ interface DatePickerPageProps {
   newDate: Date | null;
   setNewDate: (date: Date | null) => void;
   placeholder: string;
+  minDate: Date | undefined;
+  maxDate: Date | undefined;
 }
 
 const DatePickerPage = ({
   newDate,
   setNewDate,
   placeholder,
+  minDate,
+  maxDate,
 }: DatePickerPageProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,6 +43,8 @@ const DatePickerPage = ({
           }}
           onSelect={() => setIsOpen(false)}
           onInputClick={() => setIsOpen(true)}
+          minDate={minDate}
+          maxDate={maxDate}
         />
       </div>
 
