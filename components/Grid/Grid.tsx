@@ -29,7 +29,7 @@ export const Grid = ({
 
   return (
     <div
-      className={`grid ${colClass} w-full px-4 lg:px-[var(--desktop-margin)] ${className}`}
+      className={`grid ${colClass} w-full px-4 xl:px-[var(--desktop-margin)] ${className}`}
       style={{
         columnGap: `${colGap}px`,
         rowGap: `${rowGap}px`,

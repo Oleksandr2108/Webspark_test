@@ -5,7 +5,7 @@ import { Grid } from "../Grid/Grid";
 import CardItem from "../CardItem/CardItem";
 import { GridIcon } from "./GridIcon";
 import { ListIcon } from "./ListIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface CardListProps {
   posts: Post[];
@@ -17,6 +17,19 @@ const CardList = ({ posts, startDate, endDate }: CardListProps) => {
   const [viewMode, setViewMode] = useState<"list" | "grid">("list");
   const [loadMore, setLoadMore] = useState<number>(8);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setViewMode("grid");
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const filteredPosts = posts.filter((post) => {
     const postDate = new Date(post.imageUpload);
     if (startDate && postDate < startDate) return false;
@@ -26,7 +39,7 @@ const CardList = ({ posts, startDate, endDate }: CardListProps) => {
   return (
     <>
       <Grid className="gap-y-4">
-        <div className="col-span-full flex gap-5 ml-auto py-5 ">
+        <div className="hidden col-span-full md:flex gap-5 ml-auto py-5 ">
           <GridIcon
             active={viewMode === "grid"}
             onClick={() => setViewMode("grid")}

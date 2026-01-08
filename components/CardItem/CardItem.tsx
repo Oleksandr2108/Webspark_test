@@ -4,16 +4,22 @@ import Image from "next/image";
 import LikeIcon from "@/assets/image/like.svg";
 import CommentIcon from "@/assets/image/comment.svg";
 
+
 interface CardItemProps {
   viewMode: "list" | "grid";
   post: Post;
 }
 
 const CardItem = ({ viewMode, post }: CardItemProps) => {
+
+ 
+
   return (
     <div
       className={
-        viewMode === "list" ? "bg-white col-span-full" : " bg-white col-span-3"
+        viewMode === "list"
+          ? "bg-white col-span-full"
+          : " bg-white col-span-full md:col-span-3"
       }
     >
       <div
@@ -21,7 +27,13 @@ const CardItem = ({ viewMode, post }: CardItemProps) => {
           viewMode === "list" ? "flex h-21.5  items-center  pr-20" : "flex-col"
         }
       >
-        <div className={viewMode === "list" ?"relative w-21.5  h-21.5 shrink-0" : "relative w-full h-50"}>
+        <div
+          className={
+            viewMode === "list"
+              ? "relative w-21.5  h-21.5 shrink-0"
+              : "relative w-full h-50"
+          }
+        >
           <Image
             src={post.imageUrl}
             fill
@@ -36,13 +48,15 @@ const CardItem = ({ viewMode, post }: CardItemProps) => {
               : "flex-col px-3 pt-2 pb-4"
           }
         >
-          <div className={viewMode === "list" ?"flex " : "flex justify-between "}>
+          <div
+            className={viewMode === "list" ? "flex " : "flex justify-between "}
+          >
             <div>
               <h3 className="font-serif font-medium text-[16px]">Today</h3>
               <div
                 className={
                   viewMode === "list"
-                    ? "flex items-center gap-4.5 w-93.75"
+                    ? "flex items-center gap-4.5 w-25 sm:w-35 md:w-52 lg:w-80 "
                     : "flex-col"
                 }
               >
@@ -96,7 +110,13 @@ const CardItem = ({ viewMode, post }: CardItemProps) => {
             </div>
           </div>
 
-          <div className={viewMode === "list" ? "flex flex-col" : "flex items-center justify-between mt-6"}>
+          <div
+            className={
+              viewMode === "list"
+                ? "flex flex-col"
+                : "flex items-center justify-between mt-6"
+            }
+          >
             <h3 className="font-serif font-medium text-[16px]">Image upload</h3>
             <p className="font-serif font-medium text-[14px]">
               {post.imageUpload}
