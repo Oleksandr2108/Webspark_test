@@ -27,17 +27,15 @@ export const Grid = ({
       12: "grid-cols-12",
     }[columns] || "grid-cols-12";
 
-  const style = {
-    marginLeft: `${margin}px`,
-    marginRight: `${margin}px`,
-    columnGap: `${colGap}px`,
-    rowGap: `${rowGap}px`,
-  };
-
   return (
     <div
-      className={`grid ${colClass} w-auto ${className}`}
-      style={style}
+      className={`grid ${colClass} w-full px-4 lg:px-[var(--desktop-margin)] ${className}`}
+      style={{
+        columnGap: `${colGap}px`,
+        rowGap: `${rowGap}px`,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ["--desktop-margin" as any]: `${margin}px`,
+      }}
     >
       {children}
     </div>
