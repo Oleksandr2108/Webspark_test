@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 Webspark Test Project
 
-## Getting Started
+**Webspark_test** is a Next.js web application built as part of a frontend test task. The project demonstrates modern React/Next.js practices and is deployed to Vercel for production preview.
 
-First, run the development server:
+## 🔗 Live Demo
+
+**[Live Demo](https://webspark-test-delta.vercel.app/)**
+
+---
+
+## 🚀 Features
+
+- 📦 Built with **Next.js** (React-based framework)
+- 🧠 Fully typed with **TypeScript**
+- 📍 Styled with modern CSS (PostCSS/Tailwind/your setup)
+
+- 🛠 Ready for further expansion (components, data fetching, pages)
+
+---
+
+## 🧰 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **Next.js** | React framework for SSR/SSG |
+| **TypeScript** | Static typing |
+| **TailwindCSS** | Styling |
+| **Vercel** | Deployment hosting |
+| **(Optional) Additional libs** | Components/utilities |
+
+---
+
+## 📁 Repository Structure
+
+```
+📦 Webspark_test
+ ┣ 📂 app/                # Next.js App routes & pages
+ ┣ 📂 components/         # Reusable UI components
+ ┣ 📂 public/             # Static assets (images, icons)
+ ┣ 📂 assets/image/       # Asset images
+ ┣ 📂 data/               # Local JSON/data files
+ ┣ 📂 lib/                # Utilities & helpers
+ ┣ 📂 types/              # TypeScript types
+ ┣ 📜 .gitignore
+ ┣ 📜 package.json
+ ┣ 📜 tsconfig.json
+ ┣ 📜 next.config.ts
+ ┗ 📜 README.md
+```
+
+> **Tip**: Adjust this tree if you add more folders or APIs in future.
+
+---
+
+## 🧩 Installation
+
+**Clone the repo:**
+
+```bash
+git clone https://github.com/Oleksandr2108/Webspark_test.git
+```
+
+**Install dependencies:**
+
+```bash
+cd Webspark_test
+npm install
+# or yarn
+# or pnpm install
+```
+
+---
+
+## 🚧 Development
+
+**Run a local dev server:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000 to preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can edit pages under `app/`, and components under `components/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Building for Production
 
-## Learn More
+**Build the optimized project:**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Preview production build locally:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run start
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is deployed on **Vercel** — the easiest way to deploy Next.js apps.
+
+👉 **[DEMO](https://webspark-test-delta.vercel.app/)** (Live Preview)
+
+### To redeploy or connect your fork:
+
+1. Go to **[https://vercel.com](https://vercel.com)**
+2. Import the repository
+3. Configure the project (framework: Next.js)
+4. Deploy automatically on push/merge
+
+---
+
+## 📝 Contributing
+
+Contributions are welcome! Please open an issue or pull request with:
+
+- Clear description
+- Steps to reproduce (UI/feature)
+- Code formatting & linting
+
+---
+
+## 📄 License
+
+This project is open-source (add your license, e.g., MIT).
+
+---
+
+## 👤 Author
+
+**Oleksandr2108**
+
+- GitHub: [@Oleksandr2108](https://github.com/Oleksandr2108)
+- Repository: [Webspark_test](https://github.com/Oleksandr2108/Webspark_test)
+
+---
+
+Thanks for checking out this project! 🙌
